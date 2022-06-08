@@ -1,0 +1,15 @@
+django
+djangorestframework
+dj-rest-auth
+django-cors-headers
+django-allauth
+djangorestframework-simplejwt
+django-crispy-forms
+django-filter
+requests
+urllib3
+names
+tqdm
+selenium
+webdriver-manager
+pandas

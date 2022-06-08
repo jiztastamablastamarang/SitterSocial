@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="container">
+    <div>
+        <div>
+            <div><h3>What is on your mind?</h3></div>
+            <div>
+                {% crispy form %}
+            </div>
+             {% for post  in feed %}
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div>
+                    <div class="card title">
+                        <div><span><strong>{{post.author}}</strong></span> <span>{{post.date}}</span></div>
+                    </div>
+                </div>
+                <div class="card-text"><span>{{post.text}}</span></div>
+                <div>
+
+                </div>
+
+                <form action="{% url 'network:votes' post.pk %}" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="post_id" value="{{ post.id }}">
+                    <button name="vote" value="1" class="btn btn-success" type="submit">like</button>
+                    <button name="vote" value="-1" class="btn btn-danger" type="submit">dislike</button>
+                </form>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
