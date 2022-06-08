@@ -1,22 +1,21 @@
 # SitterSocial
-Simple REST API
-Object of this task is to create a simple REST API. You have to use Django and Django rest
-framework.
-##Social Network
+Simple Social Network with Django and Django rest
+framework
+
 Basic models:
-● User
-● Post (always made by a user)
+- User
+- Post (always made by a user)
 Basic features:
-● user signup
-● user login
-● post creation
-● post like
-● post unlike
-For User and Post objects, candidate is free to define attributes as they see fit. 
+- user signup
+- user login
+- post creation
+- post like
+- post unlike
+- post dislike
+
 ##Requirements:
 
 - Token authentication (JWT is prefered)
-
 
 - Use clearbit.com/enrichment for getting additional data for the user on signup
 
